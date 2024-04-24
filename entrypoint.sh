@@ -51,7 +51,7 @@ else
 fi
 
 if [ ! -z "$CFD_ID" ]; then
-  sed 's/<cloudFrontDistributionID>/'$CFD_ID'/g'
+  sed "s/<cloudFrontDistributionID>/$CFD_ID/g"
 fi
 
 # Deploy as configured in your repo
