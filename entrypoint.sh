@@ -50,6 +50,10 @@ else
   hugo
 fi
 
+if [ ! -z "$CFD_ID" ]; then
+  sed 's/<cloudFrontDistributionID>/$CFD_ID/g'
+fi
+
 # Deploy as configured in your repo
 if [ ! -z "$SOURCE_DIR" ]; then
   hugo deploy --source $SOURCE_DIR
