@@ -21,6 +21,10 @@ if [ -z "$AWS_REGION" ]; then
   err=1
 fi
 
+if [ ! -z "$CFD_ID" ]; then
+  echo "cloudFrontDistributionID is set"
+fi
+
 if [ $err -eq 1 ]; then
   exit 1
 fi
@@ -51,9 +55,7 @@ else
 fi
 
 if [ ! -z "$CFD_ID" ]; then
-  sed -i "s/<cloudFrontDistributionID>/$CFD_ID/g" hugo.toml
-  echo "sed ran"
-  cat hugo.toml
+  sed -i 's/<cloudFrontDistributionID>/$CFD_ID/gI' hugo.toml
 fi
 
 # Deploy as configured in your repo
