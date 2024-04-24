@@ -1,4 +1,4 @@
-# Hugo S3 Action
+# Hugo Build and Deploy to S3 Action
 
 GitHub action to run `hugo deploy` provided there is an S3 target configured in your Hugo repo.
 
@@ -41,6 +41,7 @@ AWS_REGION | Yes | AWS region
 AWS_ACCESS_KEY_ID | Yes | Access key with permissions to execute your deployment
 AWS_SECRET_ACCESS_KEY | Yes | Secret key
 MINIFY | No | Applies asset minification
+SOURCE_DIR | No | Allows for user-defined source directory to run `hugo deploy` from
 
 Information about how to configure a deployment to S3 in Hugo can be found here https://gohugo.io/hosting-and-deployment/hugo-deploy/.
 
