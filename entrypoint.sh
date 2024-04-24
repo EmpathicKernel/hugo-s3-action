@@ -55,7 +55,7 @@ else
 fi
 
 if [ ! -z "$CFD_ID" ]; then
-  sed -i 's/<cloudFrontDistributionID>/$CFD_ID/gI' hugo.toml
+  sed -i "s/<cloudFrontDistributionID>/$CFD_ID/gI" hugo.toml
 fi
 
 # Deploy as configured in your repo
